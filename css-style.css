@@ -1,0 +1,111 @@
+body {
+	margin: 0;
+	font-family: "Quicksand", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 700;
+  	font-style: normal;
+	background-color: #666666;
+}
+
+/* Rows with flex layout */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.25vw;
+    flex-wrap: wrap;
+    padding: 1.25vw 0;
+}
+
+/* Alternating row background colors */
+.row-1 {
+    background-color: #666666; /* dark gray */
+}
+
+.row-2 {
+    background-color: #d9ead3; /* lighter gray */
+}
+
+.row-1 .image-container img {
+    border: 0px solid #666666;
+}
+
+.row-2 .image-container img {
+    border: 0px solid #d9ead3;
+}
+
+
+/* Image container and hover text */
+.image-container {
+    position: relative;
+    width: 11.5vw;
+}
+
+.image-container img {
+    width: 11.5vw;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.image-text {
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1vw;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s ease;
+    text-align: center;
+    z-index: 2;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+/* Remove link underline */
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* Main image */
+.image-container img.main-img {
+    width: 11.5vw;
+    display: block;
+    border-radius: 1.7vw;
+    transition: 0.3s ease;
+}
+
+/* Hover image hidden by default */
+.image-container img.hover-img {
+    transform: translate(0px, 0px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11.5vw;
+    border-radius: 1.7vw;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* under text but over main image */
+}
+
+/* Show hover image on hover */
+.image-container:hover img.hover-img {
+    opacity: 1;
+}
+
+
+/* Show text on hover */
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+
+.image-container:hover .image-text {
+    opacity: 1;
+}

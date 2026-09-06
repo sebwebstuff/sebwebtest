@@ -1,0 +1,37 @@
+body {
+	background-color: #666;
+}
+
+
+h1 {
+	font-size: 6.5vw;
+	text-align: center;
+	color: #d9ead3;
+	font-family: "Quicksand", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 700;
+  	font-style: normal;
+	margin: 0;
+}
+
+button {
+	background-color: #d9ead3;
+	color: #000;
+	border: none;
+	font-size: 1.75vw;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 40vw;
+	height: 3vw;
+	font-family: "Quicksand", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 800;
+  	font-style: normal;
+}
+
+.container {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

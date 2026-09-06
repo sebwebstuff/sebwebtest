@@ -1,0 +1,192 @@
+body.sidebar-hidden .image-row {
+    padding-left: 11.8vw; 
+}
+
+.home-button {
+  position: absolute;
+  top: 1.5%;
+  left: 12.5%;
+  color: #666;
+  width: 75%;
+}
+
+.hide-button {
+  position: absolute;
+  top: 90%;
+  left: 12.5%;
+  color: #666;
+  width: 75%;
+  cursor: pointer;
+}
+
+.show-button {
+    position: fixed;
+    left: 0.3vw;
+    top: 92vh;
+    color: #666;
+
+    width: 4vw;
+    height: 4vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transform: translateX(-150%);
+    transition: transform 0.4s ease;
+
+}
+
+body.sidebar-hidden .show-button {
+    transform: translateX(0);
+}
+
+.show-button svg {
+    width: 80%;
+    height: 80%;
+    filter:
+        drop-shadow(1px 0 0 #d9ead3)
+        drop-shadow(-1px 0 0 #d9ead3)
+        drop-shadow(0 1px 0 #d9ead3)
+        drop-shadow(0 -1px 0 #d9ead3);
+}
+
+.left-rectangle {
+	position: fixed;
+	left: 3vw;
+	top: 5vh;
+	width: 5vw;
+	height: 90vh;
+	background-color: #d9ead3;
+	border-radius: 2vw;
+	border: 0.4vw solid #666;
+	transition: transform 0.5s ease;
+}
+
+.left-rectangle.hidden {
+    transform: translateX(-155%);
+}
+
+.images-container {
+	width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: "Quicksand", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 700;
+  	font-style: normal;
+	background-color: #666666;
+}
+
+/* Rows with flex layout */
+.image-row {
+    display: flex;
+    gap: 1.25vw;
+    flex-wrap: wrap;
+    padding: 1.25vw 0 1.25vw 15.975vw;
+    justify-content: flex-start;
+    transition: padding-left 0.5s ease;
+}
+
+
+/* Alternating row background colors */
+.row-1 {
+    background-color: #666666; /* dark gray */
+}
+
+.row-2 {
+    background-color: #d9ead3; /* lighter gray */
+}
+
+.row-1 .image-container img {
+    border: 0px solid #666666;
+}
+
+.row-2 .image-container img {
+    border: 0px solid #d9ead3;
+}
+
+
+/* Image container and hover text */
+.image-container {
+    position: relative;
+    width: 11.5vw;
+}
+
+.image-container img {
+    width: 11.5vw;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.image-text {
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1vw;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s ease;
+    text-align: center;
+    z-index: 2;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+/* Remove link underline */
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* Main image */
+.image-container img.main-img {
+    width: 11.5vw;
+    display: block;
+    border-radius: 1.7vw;
+    transition: 0.3s ease;
+}
+
+/* Hover image hidden by default */
+.image-container img.hover-img {
+    transform: translate(0px, 0px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11.5vw;
+    border-radius: 1.7vw;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* under text but over main image */
+}
+
+/* Show hover image on hover */
+.image-container:hover img.hover-img {
+    opacity: 1;
+}
+
+
+/* Show text on hover */
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+
+.image-container:hover .image-text {
+    opacity: 1;
+}

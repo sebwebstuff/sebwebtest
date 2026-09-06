@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "sebwebgames1",
+    "sebwebgames1": "sebwebgames1"
+  },
+  "targets": {
+    "sebwebcool": {
+      "hosting": {
+        "sebwebcool": [
+          "default"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

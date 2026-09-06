@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+<!-- style.css -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Quicksand Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+
+
+<!-- about:blank script (same tab version) -->
+<script>
+function openGame(url) {
+
+    document.open();
+    document.write(`
+        <html>
+        <head>
+            <title>about:blank</title>
+            <style>
+                body {
+                    margin: 0;
+                    overflow: hidden;
+                }
+                iframe {
+                    width: 100vw;
+                    height: 100vh;
+                    border: none;
+                }
+            </style>
+        </head>
+        <body>
+            <iframe src="${url}"></iframe>
+        </body>
+        </html>
+    `);
+    document.close();
+}
+</script>
+
+
+
+
+<div class="container">
+
+<h1>Seb Web</h1>
+
+<div style="height: 5.25vw;"></div>
+
+<center>
+<a href="#" onclick="openGame('aboutblank-games.html')">
+	<button>Games</button>
+</a>
+</center>
+
+</div>
+
+
+</body>
+
+</html>
+
+
